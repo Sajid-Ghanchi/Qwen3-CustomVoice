@@ -1,0 +1,9 @@
+#Bismillah
+{
+  "input": {
+    "text": "Hello, this is a test of the new Qwen custom voice model.",
+    "language": "English",
+    "speaker": "Vivian",
+    "instruct": "Speak with a very happy and enthusiastic tone."
+  }
+}
