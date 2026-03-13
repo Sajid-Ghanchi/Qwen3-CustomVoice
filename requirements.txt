@@ -1,0 +1,16 @@
+#Bismillah
+# RunPod SDK 
+runpod>=1.6.0
+
+# Audio processing
+soundfile>=0.12.0
+numpy>=1.24.0
+scipy>=1.10.0
+
+# Qwen TTS and Hardware Optimizations
+qwen_tts
+torch>=2.4.0
+accelerate
+transformers
+huggingface_hub
+flash-attn>=2.0.0
