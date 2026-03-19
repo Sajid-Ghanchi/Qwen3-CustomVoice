@@ -26,4 +26,4 @@ jobs:
           context: .
           push: true
           # Replace 'my-app' with whatever you want to name your image
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/my-app:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/runpod-serverless-qwen3-customvoice:v1
