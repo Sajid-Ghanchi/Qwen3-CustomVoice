@@ -1,0 +1,29 @@
+name: Build and Push Docker Image
+
+# This tells GitHub to run the workflow whenever you push to the 'main' branch
+on:
+  push:
+    branches:
+      - main 
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest # This is the virtual machine GitHub provides
+
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v4
+        
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+          
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          push: true
+          # Replace 'my-app' with whatever you want to name your image
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/my-app:latest
